@@ -1,0 +1,41 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    line-height: 1;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
