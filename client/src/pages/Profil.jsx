@@ -13,11 +13,12 @@ function Profil() {
     useEffect(() => {
         getUser(12)
             .then(res => {
-                console.log(res); // Vérification de la structure
-                setData(res.data);
+                console.log(res);
+                setData(res);
             })
             .catch(console.error);
     }, []);
+
 
     if (!data) return <p>Chargement...</p>;
 
