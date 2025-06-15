@@ -1,6 +1,7 @@
-function SideIcons() {
+function SideIcons({ icon }) {
     return (
-        <div>
+        <div className="side-icon">
+            {icon}
         </div>
     );
 }
