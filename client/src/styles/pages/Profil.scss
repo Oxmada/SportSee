@@ -1,45 +1,17 @@
-.housing-title {
-    font-size: 36px;
-    font-weight: 500;
-    color: #FF6060;
-    margin-bottom: 10px;
+.user-container {
 
-    @media (max-width: 768px) {
+    .user-title {
+        margin-bottom: 30px;
+        font-size: 48px;
+        font-weight: 500;
+
+        .user-name {
+            color: #FF0101;
+        }
+    }
+
+    .user-subtile {
         font-size: 18px;
-    }
-}
-
-.housing-location {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 20px;
-
-    @media (max-width: 768px) {
-        font-size: 14px;
-        margin-bottom: 15px;
-    }
-}
-
-.housing-host-infos-container {
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
-}
-
-.housing-dropdown-container {
-    display: flex;
-    gap: 76px;
-    margin-top: 20px;
-
-    .dropdown {
-        width: 100%;
-    }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 20px;
+        font-weight: 400;
     }
 }

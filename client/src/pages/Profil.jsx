@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { getUser } from '../services/api';
-import SideIcons from '../components/SideIcons';
 import AverageSessionChart from '../components/AverageSessionChart';
 import DailyActivityChart from '../components/DailyActivityChart';
 import NutritionCard from '../components/NutritionCard';
@@ -24,6 +23,11 @@ function Profil() {
 
     return (
         <div>
+            <div className='user-container'>
+                <p className='user-title'>Bonjour <span className="user-name">{data.name}</span></p>
+                <p className='user-subtitle'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+            </div>
+            <DailyActivityChart />
         </div>
     );
 }

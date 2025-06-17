@@ -1,49 +1,22 @@
-.side-nav {
-    position: fixed;
-    top: 90.93px;
-    left: 0;
-    width: 60px;
-    height: calc(100vh - 90.93px);
-    background-color: black;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 0 26px 20px;
+.icon-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
 
-    .icon-container {
+    .side-icon {
+        width: 64px;
+        height: 64px;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 50px;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border-radius: 6px;
 
-        .side-icon {
-            width: 64px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f0f0f0;
-            border-radius: 6px;
-
-            img {
-                width: 32px;
-                height: 32px;
-                object-fit: contain;
-            }
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
         }
     }
-
-    .side-p {
-        position: absolute;
-        writing-mode: vertical-rl; // Affiche le texte verticalement
-        transform: rotate(180deg);
-        font-size: 10px;
-        font-weight: 500;
-        text-align: center;
-        color: white;
-        bottom: 40px;
-    }
-
 }
