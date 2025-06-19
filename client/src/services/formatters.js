@@ -22,7 +22,8 @@ export function formatUserAverageSessions(data) {
   const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D']; 
   return data.sessions.map((session, index) => ({
     day: days[index],
-    sessionLength: session.sessionLength
+    sessionLength: session.sessionLength,
+    dayIndex: index // identifiant unique
   }));
 }
 

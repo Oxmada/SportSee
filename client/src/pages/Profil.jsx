@@ -28,6 +28,7 @@ function Profil() {
                 <p className='user-subtitle'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </div>
             <DailyActivityChart />
+            <AverageSessionChart />
         </div>
     );
 }

@@ -1,0 +1,42 @@
+.average-session-chart {
+    width: 258px;
+    height: 263px;
+    background: red;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    .chart-wrapper {
+        flex: 1;
+    }
+
+    .custom-tooltip {
+        background: white;
+        padding: 4px 8px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 8px;
+        color: #000;
+        pointer-events: none;
+    }
+
+    .recharts-tooltip-wrapper {
+        outline: none;
+    }
+
+    .recharts-active-dot {
+        circle {
+            fill: #fff;
+            stroke: rgba(255, 255, 255, 0.3);
+            stroke-width: 10;
+            r: 4;
+        }
+    }
+
+    text.chart-title {
+        fill: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.5;
+    }
+}
