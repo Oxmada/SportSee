@@ -16,7 +16,7 @@ function CustomTooltip({ active, payload }) {
     return null;
 }
 
-function CustomCursor({ points, width, height }) {
+function CustomCursor({ points }) {
     const x = points[0].x;
     return (
         <rect
@@ -79,7 +79,12 @@ function AverageSessionChart() {
                         dx={-18}
                     />
                     <YAxis hide />
-                    <Tooltip content={<CustomTooltip />} cursor={<CustomCursor />} />
+                    <Tooltip
+                        content={<CustomTooltip />}
+                        cursor={<CustomCursor />}
+                        offset={-20} // distance entre l'infobulle et le point (par défaut 10)
+                    />
+
                     <Line
                         type="monotone"
                         dataKey="sessionLength"

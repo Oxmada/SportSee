@@ -114,7 +114,7 @@ function DailyActivityChart() {
                         barSize={7}
                         radius={[3, 3, 0, 0]}
                         onMouseOver={(data, index, e) => { // data est nécessaire pour conserver la signature de la fonction
-                            setActiveIndex(index);  //Supp data décalerait les arguments et casserait la récup des infos.
+                            setActiveIndex(index);  // Supp data décalerait les arguments et casserait la récup des infos.
                             if (e?.target?.getAttribute) {
                                 setActiveBar({
                                     x: e.target.getAttribute('x'),

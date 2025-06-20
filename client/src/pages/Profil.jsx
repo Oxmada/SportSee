@@ -29,6 +29,8 @@ function Profil() {
             </div>
             <DailyActivityChart />
             <AverageSessionChart />
+            <PerformanceRadarChart />
+
         </div>
     );
 }
