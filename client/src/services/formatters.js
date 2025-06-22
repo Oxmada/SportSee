@@ -29,8 +29,9 @@ export function formatUserAverageSessions(data) {
 
 export function formatUserPerformance(data) {
   return data.data.map(item => ({
-    kind: data.kind[item.kind], 
-    value: item.value
+    subject: data.kind[item.kind], 
+    A: item.value
   }));
 }
+
 

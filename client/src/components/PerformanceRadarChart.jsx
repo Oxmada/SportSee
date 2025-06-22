@@ -1,48 +1,53 @@
-import React from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, } from 'recharts';
-
-const data = [
-    { subject: 'Intensité', A: 70 },
-    { subject: 'Vitesse', A: 80 },
-    { subject: 'Force', A: 75 },
-    { subject: 'Endurance', A: 85 },
-    { subject: 'Énergie', A: 60 },
-    { subject: 'Cardio', A: 65 },
-];
+import React, { useEffect, useState } from 'react';
+import {
+    Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer
+} from 'recharts';
+import { getUserPerformance } from '../services/api';
 
 function PerformanceRadarChart() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const formattedData = await getUserPerformance(12);
+                setData(formattedData);
+            } catch (error) {
+                console.error('Erreur chargement des performances', error);
+            }
+        }
+        fetchData();
+    }, []);
+
     return (
         <div className="performance-radar-chart">
             <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
-                    <PolarGrid
-                        radialLines={false}
-                        stroke="#fff"
-                        strokeWidth={1}
-                        gridType="polygon"
-                    />
+                    <PolarGrid radialLines={false} />
                     <PolarAngleAxis
                         dataKey="subject"
                         stroke="#fff"
                         axisLine={false}
                         tickLine={false}
-                        tick={({ payload, x, y, textAnchor }) => {
-                            const isEndurance = payload.value === 'Endurance';
-                            return (
-                                <text
-                                    x={x}
-                                    y={isEndurance ? y + 10 : y}
-                                    textAnchor={textAnchor}
-                                    fontSize={12}
-                                    fontWeight={500}
-                                    fill="#FFFFFF"
-                                >
-                                    {payload.value}
-                                </text>
-                            );
-                        }}
+                        tickRadius={10}
+                        tickSize={25}
+                        tick={({ payload, x, y }) => (
+                            <text
+                                x={x}
+                                y={y}
+                                textAnchor="middle"
+                                dominantBaseline="middle"
+                                fontSize={12}
+                                fontWeight={500}
+                                fill="#FFFFFF"
+                                dx={0}
+                                dy={0}
+                            >
+                                {payload.value}
+                            </text>
+                        )}
                     />
-                    <PolarRadiusAxis tick={false} axisLine={false} tickCount={5} />
+                    <PolarRadiusAxis tick={false} axisLine={false} tickCount={6} />
                     <Radar
                         name="Performance"
                         dataKey="A"
@@ -52,11 +57,14 @@ function PerformanceRadarChart() {
                     />
                 </RadarChart>
             </ResponsiveContainer>
+
         </div>
     );
 }
 
 export default PerformanceRadarChart;
+
+
 
 
 

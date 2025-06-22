@@ -1,0 +1,50 @@
+.scoreRadialChart {
+    width: 258px;
+    height: 263px;
+    background-color: #FBFBFB;
+    border-radius: 5%;
+    position: relative;
+
+    h4 {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        z-index: 2;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .chartContainer {
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .centralText {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 3;
+
+            p:first-child {
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 26px;
+                padding-bottom: 5px;
+            }
+
+            p:last-child {
+                font-size: 16px;
+                font-weight: 500;
+                color: #74798C;
+                line-height: 20px;
+            }
+        }
+    }
+}

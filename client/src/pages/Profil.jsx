@@ -4,6 +4,8 @@ import AverageSessionChart from '../components/AverageSessionChart';
 import DailyActivityChart from '../components/DailyActivityChart';
 import NutritionCard from '../components/NutritionCard';
 import PerformanceRadarChart from '../components/PerformanceRadarChart';
+import ScoreRadialChart from '../components/ScoreRadialChart';
+
 
 
 function Profil() {
@@ -30,6 +32,7 @@ function Profil() {
             <DailyActivityChart />
             <AverageSessionChart />
             <PerformanceRadarChart />
+            <ScoreRadialChart />
 
         </div>
     );
