@@ -1,0 +1,68 @@
+.nutritionCards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    width: 258px;
+    height: 124px;
+    padding-left: 30px;
+
+    .icon-container {
+        margin: 0;
+        padding: 0;
+        background-color: #fbeaea;
+        border-radius: 6px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .text-container {
+        margin-left: 20px;
+        line-height: 24px;
+
+        .value {
+            margin: 0;
+            font-weight: 700;
+            font-size: 20px;
+            color: #282d30;
+        }
+
+        .label {
+            font-weight: 500;
+            color: #74798c;
+            font-size: 14px;
+        }
+
+    }
+
+}
+
+.card.red .icon-container {
+    background-color: #fbeaea;
+}
+
+.card.blue .icon-container {
+    background-color: #e0f4ff;
+}
+
+.card.yellow .icon-container {
+    background-color: #fff6e5;
+}
+
+.card.pink .icon-container {
+    background-color: #ffeef0;
+}

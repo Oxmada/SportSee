@@ -33,6 +33,7 @@ function Profil() {
             <AverageSessionChart />
             <PerformanceRadarChart />
             <ScoreRadialChart />
+            <NutritionCard />
 
         </div>
     );
