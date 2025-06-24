@@ -29,11 +29,21 @@ function Profil() {
                 <p className='user-title'>Bonjour <span className="user-name">{data.name}</span></p>
                 <p className='user-subtitle'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </div>
-            <DailyActivityChart />
-            <AverageSessionChart />
-            <PerformanceRadarChart />
-            <ScoreRadialChart />
-            <NutritionCard />
+            <div className='main-container'>
+                <div className="graph-container">
+                    <div className="top-graph">
+                        <DailyActivityChart />
+                    </div>
+                    <div className="bottom-graphs">
+                        <AverageSessionChart />
+                        <PerformanceRadarChart />
+                        <ScoreRadialChart />
+                    </div>
+                </div>
+                <div className='nutrition-cards-container'>
+                    <NutritionCard />
+                </div>
+            </div>
 
         </div>
     );
