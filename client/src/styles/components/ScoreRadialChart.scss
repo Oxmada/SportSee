@@ -5,6 +5,11 @@
     border-radius: 5%;
     position: relative;
 
+    @media (max-width: 1280px) {
+        width: 193.5px;
+        height: 197.25px;
+    }
+
     h4 {
         position: absolute;
         top: 10px;
@@ -12,6 +17,12 @@
         z-index: 2;
         font-size: 15px;
         font-weight: 500;
+
+        @media (max-width: 1280px) {
+            top: 7.5px;
+            left: 15px;
+            font-size: 12px;
+        }
     }
 
     .chartContainer {
@@ -23,6 +34,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media (max-width: 1280px) {
+            width: 135px;
+            height: 135px;
+        }
 
         .centralText {
             position: absolute;
@@ -37,6 +53,11 @@
                 font-weight: 700;
                 line-height: 26px;
                 padding-bottom: 5px;
+
+                @media (max-width: 1280px) {
+                    font-size: 19.5px;
+                    line-height: 19.5px;
+                }
             }
 
             p:last-child {
@@ -44,6 +65,11 @@
                 font-weight: 500;
                 color: #74798C;
                 line-height: 20px;
+
+                @media (max-width: 1280px) {
+                    font-size: 14px;
+                    line-height: 15px;
+                }
             }
         }
     }

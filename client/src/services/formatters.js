@@ -3,7 +3,7 @@ export function formatUserData(data) {
     id: data.id,
     name: data.userInfos.firstName, 
     score: data.todayScore || data.score || 0, 
-    calorie: data.keyData.calorieCount,
+    calorie: (data.keyData.calorieCount / 1000).toFixed(3).replace('.', ','),
     protein: data.keyData.proteinCount,
     carbohydrate: data.keyData.carbohydrateCount,
     lipid: data.keyData.lipidCount

@@ -51,7 +51,7 @@ function DailyActivityChart() {
 
     return (
         <div className="daily-activity-chart">
-            <ResponsiveContainer width="100%" height={250}>
+            <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     data={data}
                     barGap={8}

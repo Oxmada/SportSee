@@ -22,15 +22,14 @@ function PerformanceRadarChart() {
     return (
         <div className="performance-radar-chart">
             <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
+                <RadarChart cx="50%" cy="50%" outerRadius="60%" data={data}>
                     <PolarGrid radialLines={false} />
                     <PolarAngleAxis
                         dataKey="subject"
                         stroke="#fff"
                         axisLine={false}
                         tickLine={false}
-                        tickRadius={10}
-                        tickSize={25}
+                        tickSize={20}
                         tick={({ payload, x, y }) => (
                             <text
                                 x={x}

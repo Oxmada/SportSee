@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 1280px) {
+        width: 193.5px;
+        height: 197.25px;
+    }
+
     .chart-wrapper {
         flex: 1;
     }
@@ -18,6 +23,10 @@
         font-size: 8px;
         color: #000;
         pointer-events: none;
+
+        @media (max-width: 1280px) {
+            padding: 3px 6px;
+        }
     }
 
     .recharts-tooltip-wrapper {
@@ -38,5 +47,9 @@
         font-size: 14px;
         font-weight: 500;
         opacity: 0.5;
+
+        @media (max-width: 1280px) {
+            font-size: 12px;
+        }
     }
 }
