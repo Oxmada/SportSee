@@ -10,7 +10,7 @@ function HighlightRect({ activeBar }) {
             x={parseFloat(activeBar.x) - 35}
             y={55}
             width={parseFloat(activeBar.width) + 56}
-            height={160}
+            height={200}
             fill="#C4C4C480"
             stroke="#C4C4C480"
         />
