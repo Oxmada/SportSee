@@ -1,33 +1,22 @@
 .side-nav {
-    position: fixed;
-    top: 90.93px;
-    left: 0;
-    width: 60px;
-    height: calc(100vh - 90.93px);
+    width: 117px;
     background-color: black;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 0 26px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     @media (max-width: 1280px) {
-        top: 75.69px;
-        width: 45px;
-        height: calc(100vh - 75.69px);
-        padding: 0 19.5px 15px;
+        width: 87.75px;
     }
 
     .side-p {
-        position: absolute;
         writing-mode: vertical-rl; // Affiche le texte verticalement
         transform: rotate(180deg);
         font-size: 10px;
         font-weight: 500;
         text-align: center;
         color: white;
-        bottom: 40px;
-
     }
 }

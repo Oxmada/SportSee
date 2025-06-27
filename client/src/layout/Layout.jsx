@@ -7,11 +7,13 @@ function Layout() {
         <>
             <Header />
             <main>
-                <Outlet />
+                <SideNav />
+                <div className="content">
+                    <Outlet />
+                </div>
             </main>
-            <SideNav />
         </>
-    )
+    );
 }
 
-export default Layout
+export default Layout;
