@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 import { getUser } from '../services/api';
+import { useUser } from './UserContext';
 
 function ScoreRadialChart() {
     const [score, setScore] = useState(0);
+    const { userId, useMock } = useUser(); // récupère l'ID et le flag mock depuis le context
 
     useEffect(() => {
         async function fetchData() {
             try {
-                const user = await getUser(12);
+                const user = await getUser(userId, useMock);
                 setScore(user.score);
             } catch (error) {
                 console.error('Erreur chargement score:', error);
             }
         }
         fetchData();
-    }, []);
+    }, [userId, useMock]);
 
     return (
         <div className="scoreRadialChart">
@@ -44,7 +46,3 @@ function ScoreRadialChart() {
 }
 
 export default ScoreRadialChart;
-
-
-
-

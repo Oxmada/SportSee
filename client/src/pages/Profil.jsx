@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useUser } from '../components/UserContext';
 import { getUser } from '../services/api';
 import AverageSessionChart from '../components/AverageSessionChart';
 import DailyActivityChart from '../components/DailyActivityChart';
@@ -6,20 +7,21 @@ import NutritionCard from '../components/NutritionCard';
 import PerformanceRadarChart from '../components/PerformanceRadarChart';
 import ScoreRadialChart from '../components/ScoreRadialChart';
 
-
-
 function Profil() {
+    const { userId, useMock } = useUser();
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        getUser(12)
-            .then(res => {
-                console.log(res);
-                setData(res);
-            })
-            .catch(console.error);
-    }, []);
-
+        async function fetchData() {
+            try {
+                const user = await getUser(userId, useMock);
+                setData(user);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fetchData();
+    }, [userId, useMock]);
 
     if (!data) return <p>Chargement...</p>;
 
@@ -44,9 +46,9 @@ function Profil() {
                     <NutritionCard />
                 </div>
             </div>
-
         </div>
     );
 }
 
-export default Profil
+export default Profil;
+
